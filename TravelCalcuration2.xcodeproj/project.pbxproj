@@ -15,6 +15,7 @@
 		918C57AF1E6A7D5A00C56D70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918C57AD1E6A7D5A00C56D70 /* LaunchScreen.storyboard */; };
 		918C57BA1E6A7D5A00C56D70 /* TravelCalcuration2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918C57B91E6A7D5A00C56D70 /* TravelCalcuration2Tests.swift */; };
 		918C57C51E6A7D5A00C56D70 /* TravelCalcuration2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918C57C41E6A7D5A00C56D70 /* TravelCalcuration2UITests.swift */; };
+		91DFE4E61E6AA1E70069E49B /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DFE4E51E6AA1E70069E49B /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		918C57C01E6A7D5A00C56D70 /* TravelCalcuration2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelCalcuration2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		918C57C41E6A7D5A00C56D70 /* TravelCalcuration2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelCalcuration2UITests.swift; sourceTree = "<group>"; };
 		918C57C61E6A7D5A00C56D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91DFE4E51E6AA1E70069E49B /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				918C57A21E6A7D5A00C56D70 /* AppDelegate.swift */,
 				918C57A41E6A7D5A00C56D70 /* FirstViewController.swift */,
 				918C57A61E6A7D5A00C56D70 /* SecondViewController.swift */,
+				91DFE4E51E6AA1E70069E49B /* ThirdViewController.swift */,
 				918C57A81E6A7D5A00C56D70 /* Main.storyboard */,
 				918C57AB1E6A7D5A00C56D70 /* Assets.xcassets */,
 				918C57AD1E6A7D5A00C56D70 /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 			files = (
 				918C57A71E6A7D5A00C56D70 /* SecondViewController.swift in Sources */,
 				918C57A31E6A7D5A00C56D70 /* AppDelegate.swift in Sources */,
+				91DFE4E61E6AA1E70069E49B /* ThirdViewController.swift in Sources */,
 				918C57A51E6A7D5A00C56D70 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +511,7 @@
 				918C57CB1E6A7D5A00C56D70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		918C57CC1E6A7D5A00C56D70 /* Build configuration list for PBXNativeTarget "TravelCalcuration2Tests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +520,7 @@
 				918C57CE1E6A7D5A00C56D70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		918C57CF1E6A7D5A00C56D70 /* Build configuration list for PBXNativeTarget "TravelCalcuration2UITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +529,7 @@
 				918C57D11E6A7D5A00C56D70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
