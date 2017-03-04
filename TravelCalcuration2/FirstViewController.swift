@@ -12,6 +12,8 @@ import UIKit
 var todolist = [String]()
 var paymentlist = [[String]]()
 
+
+
 class FirstViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
@@ -26,9 +28,20 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         if UserDefaults.standard.object(forKey: "list") != nil {
         todolist = UserDefaults.standard.object(forKey: "list") as! [String]
         }
+        
         if UserDefaults.standard.object(forKey: "paymentlist") != nil {
             paymentlist = UserDefaults.standard.object(forKey: "paymentlist") as! [[String]]
+            
+            //paymentlist = [[]]
         }
+        todolist = []
+        paymentlist = [[]]
+        //paymentlistをファイルに保存
+        UserDefaults.standard.set(paymentlist, forKey: "todolist")
+        //paymentlistをファイルに保存
+        UserDefaults.standard.set(paymentlist, forKey: "paymentlist")
+
+        
         
         print(todolist)
         print(paymentlist)
@@ -53,9 +66,9 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         //セルを選択し、Deleteが選択された場合
         if editingStyle == UITableViewCellEditingStyle.delete {
             todolist.remove(at: indexPath.row)//選択した番号で配列から削除
-            //paymentlist.remove(at: indexPath.row)
+            paymentlist.remove(at: indexPath.row)
             UserDefaults.standard.set(todolist, forKey: "list")//削除された配列をファイルに上書き
-            //UserDefaults.standard.set(paymentlist, forKey: "list")//削除された配列をファイルに上書き
+            UserDefaults.standard.set(paymentlist, forKey: "list")//削除された配列をファイルに上書き
             tableView.reloadData()//tableViewの再表示
         }
     }

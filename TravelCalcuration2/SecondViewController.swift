@@ -27,9 +27,14 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             
             textfield2.text = ""//textfieldをクリアする
             textfield3.text = ""//textfieldをクリアする
+            //paymentlistをファイルに保存
             UserDefaults.standard.set(paymentlist, forKey: "paymentlist")
             
             print(paymentlist)
+            
+            
+            
+            
 
         }
     
