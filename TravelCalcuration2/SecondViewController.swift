@@ -30,6 +30,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             //paymentlistをファイルに保存
             UserDefaults.standard.set(paymentlist, forKey: "paymentlist")
             
+            print("Add")
+            print(todolist)
             print(paymentlist)
             
             

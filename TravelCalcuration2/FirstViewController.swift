@@ -26,20 +26,22 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         //消えてもいいようにファイルに保存　起動する際に保存から読み込んで配列に反映
         //NSUserDefaultsはファイルから読み込む際に使う　リストというキーで読み込む
         if UserDefaults.standard.object(forKey: "list") != nil {
-        todolist = UserDefaults.standard.object(forKey: "list") as! [String]
+            todolist = UserDefaults.standard.object(forKey: "list") as! [String]
+            
         }
         
         if UserDefaults.standard.object(forKey: "paymentlist") != nil {
             paymentlist = UserDefaults.standard.object(forKey: "paymentlist") as! [[String]]
             
-            //paymentlist = [[]]
         }
-        todolist = []
-        paymentlist = [[]]
+        
+        //paymentlist = []
+        //todolist = []
+
+        //todolistをファイルに保存
+        //UserDefaults.standard.set(todolist, forKey: "list")
         //paymentlistをファイルに保存
-        UserDefaults.standard.set(paymentlist, forKey: "todolist")
-        //paymentlistをファイルに保存
-        UserDefaults.standard.set(paymentlist, forKey: "paymentlist")
+        //UserDefaults.standard.set(paymentlist, forKey: "paymentlist")
 
         
         
@@ -68,8 +70,11 @@ class FirstViewController: UIViewController, UITableViewDelegate {
             todolist.remove(at: indexPath.row)//選択した番号で配列から削除
             paymentlist.remove(at: indexPath.row)
             UserDefaults.standard.set(todolist, forKey: "list")//削除された配列をファイルに上書き
-            UserDefaults.standard.set(paymentlist, forKey: "list")//削除された配列をファイルに上書き
+            UserDefaults.standard.set(paymentlist, forKey: "paymentlist")//削除された配列をファイルに上書き
             tableView.reloadData()//tableViewの再表示
+            print("Delete")
+            print(todolist)
+            print(paymentlist)
         }
     }
     
