@@ -11,7 +11,8 @@ import UIKit
 //todolistを記憶しておく配列　他のViewControllerから使えるようグローバルで宣言
 var todolist = [String]()
 var paymentlist = [[String]]()
-
+var resultlist1 = [String]()
+var resultlist2 = [String]()
 
 
 class FirstViewController: UIViewController, UITableViewDelegate {
@@ -65,6 +66,8 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         return cell
     }
     
+
+    
     //選択したセルのtodolistを削除する
     func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath){
         //セルを選択し、Deleteが選択された場合
@@ -82,6 +85,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
+        
     }
     
     override func didReceiveMemoryWarning() {

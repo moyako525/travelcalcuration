@@ -34,11 +34,41 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             print(todolist)
             print(paymentlist)
             
+            if UserDefaults.standard.object(forKey: "paymentlist") == nil {
+                
+            } else if paymentlist.count == 1 {
+                
+                resultlist1.append(paymentlist[0][0])
+                resultlist2.append(paymentlist[0][1])
+                
+            } else if paymentlist.count >= 2 {
+            
+                for n in 2...paymentlist.count{
+                    
+                    let arrayNum = resultlist1.index(of: paymentlist[n-1][0])
+                    
+                    if arrayNum == nil {
+                        
+                        resultlist1.append(paymentlist[n-1][0])
+                        resultlist2.append(paymentlist[n-1][1])
+                        
+                    }else if arrayNum != nil {
+                        
+                        //var nonArrayNum: Int = arrayNum!
+                        //var num1: Int = Int(resultlist2[Int(arrayNum!)])!
+                        let num: Int = Int(resultlist2[Int(arrayNum!)])! + Int(paymentlist[n-1][1])!
+                        resultlist2[arrayNum!]  = String(num)
+                    
+                    }
+                
+            }
             
             
             
+            }
+    }
 
-        }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
