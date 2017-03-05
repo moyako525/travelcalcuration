@@ -10,6 +10,7 @@ import UIKit
 
 class ThirdViewController: UITableViewCell {
 
+    @IBOutlet weak var tableview2: UITableView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

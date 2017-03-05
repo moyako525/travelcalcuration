@@ -35,6 +35,8 @@ class FirstViewController: UIViewController, UITableViewDelegate {
             
         }
         
+        print(todolist.count)
+        
         //paymentlist = []
         //todolist = []
 
