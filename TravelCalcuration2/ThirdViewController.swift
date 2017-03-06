@@ -25,7 +25,7 @@ class ThirdViewController: UIViewController, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
 
 
-        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")//せるのidentifierを指定
+        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")//せるのidentifierを指定
 
         
         cell.textLabel!.text = resultlist1[indexPath.row]
