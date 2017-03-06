@@ -16,9 +16,9 @@ var resultlist2 = [String]()
 
 
 class FirstViewController: UIViewController, UITableViewDelegate {
-
+    
     @IBOutlet weak var tableView: UITableView!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,21 +36,43 @@ class FirstViewController: UIViewController, UITableViewDelegate {
             
         }
         
-        print(todolist.count)
+        if UserDefaults.standard.object(forKey: "resultlist1") != nil {
+            resultlist1 = UserDefaults.standard.object(forKey: "resultlist1") as! [String]
+            
+        }
+        
+        if UserDefaults.standard.object(forKey: "resultlist2") != nil {
+            resultlist2 = UserDefaults.standard.object(forKey: "resultlist2") as! [String]
+            
+        }
+        
+        
         
         //paymentlist = []
         //todolist = []
-
+        //resultlist1 = []
+        //resultlist2 = []
+        
+        
         //todolistをファイルに保存
         //UserDefaults.standard.set(todolist, forKey: "list")
+        
         //paymentlistをファイルに保存
         //UserDefaults.standard.set(paymentlist, forKey: "paymentlist")
-
+        
+        //resultlist1をファイルに保存
+        //UserDefaults.standard.set(resultlist1, forKey: "resultlist1")
+        
+        //resultlist2をファイルに保存
+        //UserDefaults.standard.set(resultlist2, forKey: "resultlist2")
         
         
+        print(todolist.count)
         print(todolist)
         print(paymentlist)
-
+        print(resultlist1)
+        print(resultlist2)
+        
         
     }
     
@@ -66,7 +88,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         return cell
     }
     
-
+    
     
     //選択したセルのtodolistを削除する
     func tableView(_ tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: IndexPath){
@@ -77,9 +99,47 @@ class FirstViewController: UIViewController, UITableViewDelegate {
             UserDefaults.standard.set(todolist, forKey: "list")//削除された配列をファイルに上書き
             UserDefaults.standard.set(paymentlist, forKey: "paymentlist")//削除された配列をファイルに上書き
             tableView.reloadData()//tableViewの再表示
+            
+            if UserDefaults.standard.object(forKey: "paymentlist") == nil {
+                
+            } else if paymentlist.count == 1 {
+                
+                resultlist1.append(paymentlist[0][0])
+                resultlist2.append(paymentlist[0][1])
+                
+                
+            } else if paymentlist.count >= 2 {
+                
+                for n in 2...paymentlist.count{
+                    
+                    let arrayNum = resultlist1.index(of: paymentlist[n-1][0])
+                    
+                    if arrayNum == nil {
+                        
+                        resultlist1.append(paymentlist[n-1][0])
+                        resultlist2.append(paymentlist[n-1][1])
+                        
+                    }else if arrayNum != nil {
+                        
+                        //var nonArrayNum: Int = arrayNum!
+                        //var num1: Int = Int(resultlist2[Int(arrayNum!)])!
+                        let num: Int = Int(resultlist2[Int(arrayNum!)])! + Int(paymentlist[n-1][1])!
+                        resultlist2[arrayNum!]  = String(num)
+                        
+                    }
+                    
+                }
+                
+            }
+            
+            UserDefaults.standard.set(resultlist1, forKey: "resultlist1")//配列をファイルに上書き
+            UserDefaults.standard.set(resultlist2, forKey: "resultlist2")//配列をファイルに上書き
+            
             print("Delete")
             print(todolist)
             print(paymentlist)
+            print(resultlist1)
+            print(resultlist2)
         }
     }
     
