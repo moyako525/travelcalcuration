@@ -11,11 +11,11 @@ import UIKit
 
 
 class ThirdViewController: UIViewController, UITableViewDelegate {
-
+    
     @IBOutlet weak var tableView2: UITableView!
     
-
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return resultlist1.count //todolist配列の数を取得
     }
     
@@ -28,13 +28,13 @@ class ThirdViewController: UIViewController, UITableViewDelegate {
         cell.textLabel!.text = resultlist1[indexPath.row]
         cell.detailTextLabel?.text = resultlist2[indexPath.row]
         return cell
-
+        
     }
     
-
-
     
-
+    
+    
+    
     
     override func viewDidAppear(_ animated: Bool) {
         tableView2.reloadData()
@@ -44,6 +44,6 @@ class ThirdViewController: UIViewController, UITableViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
