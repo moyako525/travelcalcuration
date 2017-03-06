@@ -23,9 +23,13 @@ class ThirdViewController: UIViewController, UITableViewDelegate {
     
     //配列の値をセルにセットし、todoListを表示する
     func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")//せるのidentifierを指定
-        //cell.textLabel?.text = resultlist1[indexPath.row]//todolist配列の中身をセルにセット
+
+
+        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")//せるのidentifierを指定
+
+        
         cell.textLabel!.text = resultlist1[indexPath.row]
+
         cell.detailTextLabel?.text = resultlist2[indexPath.row]
         return cell
         
