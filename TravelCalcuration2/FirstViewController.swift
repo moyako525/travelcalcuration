@@ -48,23 +48,28 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         
         
         
-//        paymentlist = []
-//        todolist = []
-//        resultlist1 = []
-//        resultlist2 = []
+
+        paymentlist = []
+        todolist = []
+        resultlist1 = []
+        resultlist2 = []
         
         
         //todolistをファイルに保存
-        //UserDefaults.standard.set(todolist, forKey: "list")
+        //
+        UserDefaults.standard.set(todolist, forKey: "list")
         
         //paymentlistをファイルに保存
-        //UserDefaults.standard.set(paymentlist, forKey: "paymentlist")
+        //
+        UserDefaults.standard.set(paymentlist, forKey: "paymentlist")
         
         //resultlist1をファイルに保存
-        //UserDefaults.standard.set(resultlist1, forKey: "resultlist1")
+        //
+        UserDefaults.standard.set(resultlist1, forKey: "resultlist1")
         
         //resultlist2をファイルに保存
-        //UserDefaults.standard.set(resultlist2, forKey: "resultlist2")
+        //
+        UserDefaults.standard.set(resultlist2, forKey: "resultlist2")
         
         
         print(todolist.count)
@@ -111,7 +116,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
                     
                 }else if arrayNum != nil {
                     
-                    resultlist2[arrayNum!] = String(Int(resultlist2[arrayNum!])! - Int(paymentlist[indexPath.row][1])!)
+                    resultlist2[arrayNum!] = String(Double(resultlist2[arrayNum!])! - Double(paymentlist[indexPath.row][1])!)
 
                     UserDefaults.standard.set(resultlist2, forKey: "resultlist2")//配列をファイルに上書き
                     

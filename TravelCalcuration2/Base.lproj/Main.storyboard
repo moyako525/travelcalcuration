@@ -86,8 +86,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRS-do-a0g">
-                                <rect key="frame" x="172" y="522" width="30" height="30"/>
+                                <rect key="frame" x="172" y="568" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="0"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="additem:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="boC-MH-h0b"/>
@@ -121,11 +122,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nVF-Cw-92e">
+                                <rect key="frame" x="100" y="442" width="182" height="112"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="WBr-5Y-OT9"/>
+                                    <constraint firstAttribute="width" constant="100" id="ZdF-Kh-kyM"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="6li-L8-iya"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="XOg-Aj-Jno"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sZ-bW-aHn">
+                                <rect key="frame" x="16" y="0.0" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="1"/>
+                                <state key="normal" title="レート再受信"/>
+                                <connections>
+                                    <action selector="tapped:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="C1B-Ha-wxL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="btn1" destination="iRS-do-a0g" id="lI3-bT-BKX"/>
+                        <outlet property="btn2" destination="5sZ-bW-aHn" id="tbd-QM-Bco"/>
+                        <outlet property="pickerview1" destination="nVF-Cw-92e" id="cfQ-D8-a8s"/>
                         <outlet property="textfield" destination="zqD-Uk-FUR" id="2Am-zb-O7I"/>
                         <outlet property="textfield2" destination="NXo-hZ-CSf" id="Hiq-Cw-Rwa"/>
                         <outlet property="textfield3" destination="GKP-Wx-iGj" id="v4h-Gj-487"/>
@@ -138,7 +162,6 @@
         <!--Third-->
         <scene sceneID="hl8-Hh-d5u">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pWe-Q9-diJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Third" id="jkd-RS-GOL" customClass="ThirdViewController" customModule="TravelCalcuration2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MXU-bf-YBl"/>
@@ -194,11 +217,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="svS-c7-JlC"/>
+                    <tabBarItem key="tabBarItem" title="計算" id="svS-c7-JlC"/>
                     <connections>
                         <outlet property="tableView2" destination="Ecx-Zr-zhu" id="u6b-p7-Fo9"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pWe-Q9-diJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="756" y="1004.3478260869566"/>
         </scene>
