@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First View Controller-->
+        <!--お会計リスト-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="TravelCalcuration2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="SecondViewController" customModule="TravelCalcuration2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -50,19 +50,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" selectedImage="second" systemItem="mostViewed" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="お会計リスト" image="second" selectedImage="second" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="tableView" destination="VmJ-hf-U4n" id="4h8-No-KmP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="865" y="105"/>
         </scene>
-        <!--Second-->
+        <!--アイテム追加-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="TravelCalcuration2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="FirstViewController" customModule="TravelCalcuration2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -185,7 +185,7 @@
                             <constraint firstItem="JCy-Jc-N79" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" constant="-230" id="wce-yE-4Qc"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="アイテム追加" image="first" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="btn1" destination="iRS-do-a0g" id="lI3-bT-BKX"/>
                         <outlet property="btn2" destination="5sZ-bW-aHn" id="tbd-QM-Bco"/>
@@ -197,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+            <point key="canvasLocation" x="865" y="-672"/>
         </scene>
         <!--Third-->
         <scene sceneID="hl8-Hh-d5u">
@@ -257,7 +257,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="計算" id="svS-c7-JlC"/>
+                    <tabBarItem key="tabBarItem" title="計算結果" image="second" id="7ev-Ii-pn6"/>
                     <connections>
                         <outlet property="tableView2" destination="Ecx-Zr-zhu" id="u6b-p7-Fo9"/>
                     </connections>
@@ -277,9 +277,9 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="jkd-RS-GOL" kind="relationship" relationship="viewControllers" id="WMs-AI-pD3"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="Dcl-ta-pR9"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="cxt-AM-z3q"/>
+                        <segue destination="jkd-RS-GOL" kind="relationship" relationship="viewControllers" id="kZo-wE-LUJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -288,6 +288,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

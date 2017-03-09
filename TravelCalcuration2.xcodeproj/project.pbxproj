@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		918C57A31E6A7D5A00C56D70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918C57A21E6A7D5A00C56D70 /* AppDelegate.swift */; };
-		918C57A51E6A7D5A00C56D70 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918C57A41E6A7D5A00C56D70 /* FirstViewController.swift */; };
-		918C57A71E6A7D5A00C56D70 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918C57A61E6A7D5A00C56D70 /* SecondViewController.swift */; };
+		918C57A51E6A7D5A00C56D70 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918C57A41E6A7D5A00C56D70 /* SecondViewController.swift */; };
+		918C57A71E6A7D5A00C56D70 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918C57A61E6A7D5A00C56D70 /* FirstViewController.swift */; };
 		918C57AA1E6A7D5A00C56D70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918C57A81E6A7D5A00C56D70 /* Main.storyboard */; };
 		918C57AC1E6A7D5A00C56D70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 918C57AB1E6A7D5A00C56D70 /* Assets.xcassets */; };
 		918C57AF1E6A7D5A00C56D70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 918C57AD1E6A7D5A00C56D70 /* LaunchScreen.storyboard */; };
@@ -40,8 +40,8 @@
 /* Begin PBXFileReference section */
 		918C579F1E6A7D5A00C56D70 /* TravelCalcuration2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelCalcuration2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		918C57A21E6A7D5A00C56D70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		918C57A41E6A7D5A00C56D70 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		918C57A61E6A7D5A00C56D70 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		918C57A41E6A7D5A00C56D70 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		918C57A61E6A7D5A00C56D70 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		918C57A91E6A7D5A00C56D70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		918C57AB1E6A7D5A00C56D70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		918C57AE1E6A7D5A00C56D70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,8 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				918C57A21E6A7D5A00C56D70 /* AppDelegate.swift */,
-				918C57A41E6A7D5A00C56D70 /* FirstViewController.swift */,
-				918C57A61E6A7D5A00C56D70 /* SecondViewController.swift */,
+				918C57A61E6A7D5A00C56D70 /* FirstViewController.swift */,
+				918C57A41E6A7D5A00C56D70 /* SecondViewController.swift */,
 				91DFE4E51E6AA1E70069E49B /* ThirdViewController.swift */,
 				91E149C31E6EE5DD00DCD8CE /* RateData.swift */,
 				91E149C51E6EE63300DCD8CE /* GetRateController.swift */,
@@ -272,11 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				91E149C61E6EE63300DCD8CE /* GetRateController.swift in Sources */,
-				918C57A71E6A7D5A00C56D70 /* SecondViewController.swift in Sources */,
+				918C57A71E6A7D5A00C56D70 /* FirstViewController.swift in Sources */,
 				918C57A31E6A7D5A00C56D70 /* AppDelegate.swift in Sources */,
 				91E149C41E6EE5DD00DCD8CE /* RateData.swift in Sources */,
 				91DFE4E61E6AA1E70069E49B /* ThirdViewController.swift in Sources */,
-				918C57A51E6A7D5A00C56D70 /* FirstViewController.swift in Sources */,
+				918C57A51E6A7D5A00C56D70 /* SecondViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
