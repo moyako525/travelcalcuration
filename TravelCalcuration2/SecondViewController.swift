@@ -8,11 +8,7 @@
 
 import UIKit
 
-//todolistを記憶しておく配列　他のViewControllerから使えるようグローバルで宣言
-var todolist = [String]()
-var paymentlist = [[String]]()
-var resultlist1 = [String]()
-var resultlist2 = [String]()
+
 
 
 class SecondViewController: UIViewController, UITableViewDelegate {
@@ -60,7 +56,7 @@ class SecondViewController: UIViewController, UITableViewDelegate {
                     
                 }else if arrayNum != nil {
                     
-                    if paymentlist[indexPath.row][1] == resultlist2[arrayNum!]{
+                    if paymentlist[indexPath.row][1] == String(resultlist2[arrayNum!]){
                         
                         resultlist1.remove(at: arrayNum!)
                         resultlist2.remove(at: arrayNum!)
@@ -69,6 +65,8 @@ class SecondViewController: UIViewController, UITableViewDelegate {
                         UserDefaults.standard.set(resultlist2, forKey: "resultlist2")//配列をファイルに上書き
                         
                     } else {
+                        
+                        
                         
                         resultlist2[arrayNum!] = String(Double(resultlist2[arrayNum!])! - Double(paymentlist[indexPath.row][1])!)
                         
@@ -94,11 +92,20 @@ class SecondViewController: UIViewController, UITableViewDelegate {
             UserDefaults.standard.set(paymentlist, forKey: "paymentlist")//削除された配列をファイルに上書き
             tableView.reloadData()//tableViewの再表示
             
+            var DoubleResultlist2 = [Double]()
+            
+            for str in resultlist2 {
+                DoubleResultlist2.append(Double(str)!)
+            }
+            
+            
+            
             print("Delete")
             print(todolist)
             print(paymentlist)
             print(resultlist1)
             print(resultlist2)
+            print(DoubleResultlist2)
             
         }
         

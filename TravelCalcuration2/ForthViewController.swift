@@ -10,13 +10,20 @@ import UIKit
 
 
 
-class ThirdViewController: UIViewController, UITableViewDelegate {
+class ForthViewController: UIViewController, UITableViewDelegate {
     
-    @IBOutlet weak var tableView2: UITableView!
+
+    @IBOutlet weak var tableView3: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return resultlist1.count //todolist配列の数を取得
+        return wordlist.count //todolist配列の数を取得
     }
     
     
@@ -25,13 +32,12 @@ class ThirdViewController: UIViewController, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
         
         
-        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "cell")//せるのidentifierを指定
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         
+        cell.textLabel!.text = wordlist[indexPath.row]
         
-        cell.textLabel!.text = resultlist1[indexPath.row]
-        
-        cell.detailTextLabel?.text = resultlist2[indexPath.row]
         return cell
+        
         
     }
     
@@ -41,7 +47,7 @@ class ThirdViewController: UIViewController, UITableViewDelegate {
     
     
     override func viewDidAppear(_ animated: Bool) {
-        tableView2.reloadData()
+        tableView3.reloadData()
     }
     
     override func didReceiveMemoryWarning() {

@@ -8,6 +8,19 @@
 
 import UIKit
 
+//todolistを記憶しておく配列　他のViewControllerから使えるようグローバルで宣言
+var todolist = [String]()
+var paymentlist = [[String]]()
+var resultlist1 = [String]()
+var resultlist2 = [String]()
+var resultlist3 = [String]()
+var resultlist4 = [Int]()
+var resultlist5 = [String]()
+var resultlist6 = [Int]()
+var wordlist = [String]()
+var DoubleResultlist2 = [Double]()
+
+
 class FirstViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate {
     
     @IBOutlet weak var textfield: UITextField!
@@ -16,6 +29,8 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIPickerViewDe
     @IBOutlet weak var pickerview1: UIPickerView!
     @IBOutlet weak var btn1: UIButton!
     @IBOutlet weak var btn2: UIButton!
+    
+    
     
     var data3:String = ""
     var data4:String = ""
@@ -54,31 +69,23 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIPickerViewDe
         
         
         
-        //
-        paymentlist = []
-        //
-        todolist = []
-        //
-        resultlist1 = []
-        //
-        resultlist2 = []
+        //paymentlist = []
+        //todolist = []
+        //resultlist1 = []
+        //resultlist2 = []
         
         
         //todolistをファイルに保存
-        //
-        UserDefaults.standard.set(todolist, forKey: "list")
+        //UserDefaults.standard.set(todolist, forKey: "list")
         
         //paymentlistをファイルに保存
-        //
-        UserDefaults.standard.set(paymentlist, forKey: "paymentlist")
+        //UserDefaults.standard.set(paymentlist, forKey: "paymentlist")
         
         //resultlist1をファイルに保存
-        //
-        UserDefaults.standard.set(resultlist1, forKey: "resultlist1")
+        //UserDefaults.standard.set(resultlist1, forKey: "resultlist1")
         
         //resultlist2をファイルに保存
-        //
-        UserDefaults.standard.set(resultlist2, forKey: "resultlist2")
+        //UserDefaults.standard.set(resultlist2, forKey: "resultlist2")
         
         
         print(todolist.count)
@@ -88,8 +95,8 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIPickerViewDe
         print(resultlist2)
         
         
-    
-
+        
+        
         
         super.viewDidLoad()
         
@@ -235,7 +242,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIPickerViewDe
         
     }
     
-
+    
     
     
     @IBAction func additem(_ sender: AnyObject) {
@@ -291,7 +298,87 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIPickerViewDe
                 
             }
             
+            for n in 0...resultlist2.count-1 {
+                DoubleResultlist2.append(Double(resultlist2[n])!)
+            }
+            
+            let sum = DoubleResultlist2.reduce(0, +)
+            
+            let num2 = sum/(Double(resultlist2.count))
+            
+            for _ in 0...((DoubleResultlist2.count)-1){
+                
+                let numMax = DoubleResultlist2.max()
+                
+                let max1 = DoubleResultlist2.index(of: numMax!)
+                
+                resultlist3.append(resultlist1[max1!])
+                
+                resultlist4.append(Int(DoubleResultlist2[max1!]))
+                
+                DoubleResultlist2.remove(at: max1!)
+                
+                
+            }
+            
+            
+            if resultlist4.count == 1 {
+                
+            } else if resultlist4.count == 2 {
+                let num3 = resultlist4[0] - resultlist4[1]
+                let word = "\(resultlist3[0])は\(resultlist3[1])に\(num3)円もらう"
+                wordlist.append(word)
+                
+            } else if resultlist4.count >= 3{
+                
+                for a in 0...((resultlist4.count)-1) {
+                    
+                    if  resultlist4[a] > Int(num2) {
+                        resultlist6.append(resultlist4[a])
+                        resultlist5.append(resultlist3[a])
+                        
+                    }}
+                for _ in 1...resultlist6.count{
+                    resultlist4.removeFirst()
+                    resultlist3.removeFirst()
+                    
+                }
+                
+                if resultlist6.count == 0 {
+                    
+                } else if resultlist6.count >= 1{
+                    
+                    for a in 0...(resultlist6.count-1){
+                        var num3 = resultlist6[a]-Int(num2)
+                        let num4 = Int(num2)-resultlist4[a]
+                        while num3 >= 0{
+                            
+                            if num3 < num4 {
+                                
+                                let word = "\(resultlist5[a])は\(resultlist3[a])に\(num3)円もらう"
+                                wordlist.append(word)
+                                
+                                
+                            } else if num3 > num4 {
+                                
+                                let word = "\(resultlist5[a])は\(resultlist3[a])に\(num4)円もらう"
+                                num3 = num3-num4
+                                wordlist.append(word)
+                            }
+                        }
+                    }
+                }
+            }
+            
+            
+            
         }
+        
+        
+        
+        
+        
+        
         
         
         
@@ -300,9 +387,10 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIPickerViewDe
         print(paymentlist)
         print(resultlist1)
         print(resultlist2)
+        print(DoubleResultlist2)
         
     }
-
+    
     
     @IBAction func tapped(_ sender: UIButton) {
         
@@ -310,8 +398,9 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UIPickerViewDe
         get.execute()
         
     }
-
-
+    
+    
+    
     
     
     override func didReceiveMemoryWarning() {

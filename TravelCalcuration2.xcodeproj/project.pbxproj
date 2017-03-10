@@ -18,6 +18,7 @@
 		91DFE4E61E6AA1E70069E49B /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DFE4E51E6AA1E70069E49B /* ThirdViewController.swift */; };
 		91E149C41E6EE5DD00DCD8CE /* RateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E149C31E6EE5DD00DCD8CE /* RateData.swift */; };
 		91E149C61E6EE63300DCD8CE /* GetRateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E149C51E6EE63300DCD8CE /* GetRateController.swift */; };
+		91E54FD81E71C0DD0055E5A9 /* ForthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E54FD71E71C0DD0055E5A9 /* ForthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		91DFE4E51E6AA1E70069E49B /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		91E149C31E6EE5DD00DCD8CE /* RateData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateData.swift; sourceTree = "<group>"; };
 		91E149C51E6EE63300DCD8CE /* GetRateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRateController.swift; sourceTree = "<group>"; };
+		91E54FD71E71C0DD0055E5A9 /* ForthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				918C57A61E6A7D5A00C56D70 /* FirstViewController.swift */,
 				918C57A41E6A7D5A00C56D70 /* SecondViewController.swift */,
 				91DFE4E51E6AA1E70069E49B /* ThirdViewController.swift */,
+				91E54FD71E71C0DD0055E5A9 /* ForthViewController.swift */,
 				91E149C31E6EE5DD00DCD8CE /* RateData.swift */,
 				91E149C51E6EE63300DCD8CE /* GetRateController.swift */,
 				918C57A81E6A7D5A00C56D70 /* Main.storyboard */,
@@ -274,6 +277,7 @@
 				91E149C61E6EE63300DCD8CE /* GetRateController.swift in Sources */,
 				918C57A71E6A7D5A00C56D70 /* FirstViewController.swift in Sources */,
 				918C57A31E6A7D5A00C56D70 /* AppDelegate.swift in Sources */,
+				91E54FD81E71C0DD0055E5A9 /* ForthViewController.swift in Sources */,
 				91E149C41E6EE5DD00DCD8CE /* RateData.swift in Sources */,
 				91DFE4E61E6AA1E70069E49B /* ThirdViewController.swift in Sources */,
 				918C57A51E6A7D5A00C56D70 /* SecondViewController.swift in Sources */,
